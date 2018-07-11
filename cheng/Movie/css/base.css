@@ -1,0 +1,281 @@
+/* 通用格式 "Helvetica Neue"*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('Sansation_Light.ttf'), url('Sansation_Light.eot');
+    /* IE9+ */
+}
+
+#mv_about,
+#mv_hot,
+#mv_link {
+    padding: 20px 0;
+}
+
+#mv_about .title,
+#mv_hot .title,
+#mv_link .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+/* 通用格式 */
+
+/* head格式 */
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#mv_header .top-bar {
+    height: 40px;
+    line-height: 39px;
+    border-bottom: 1px solid gray;
+}
+
+#mv_header .top-bar .container .row>div+div {
+    border-left: 1px solid gray;
+}
+
+#mv_header .top-bar .container .row .top-bar-1 a {
+    position: relative;
+}
+
+#mv_header .top-bar .container .row .top-bar-1 a img {
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -65px;
+    margin-top: -10px;
+    z-index: 9999;
+}
+
+#mv_header .top-bar .container .row .top-bar-1 a:hover img {
+    display: block;
+}
+
+.icon-phone::before {
+    font-size: 13px;
+}
+
+.icon-tel::before {
+    content: '☎';
+    font-size: 13px;
+}
+
+#mv_header .navbar-mv {
+    background-color: black;
+    margin-bottom: 0px;
+}
+
+#mv_header .navbar-mv .navbar-brand {
+    height: 70px;
+    padding: 10px 15px;
+}
+
+#mv_header .navbar-mv .navbar-nav a {
+    height: 70px;
+    line-height: 40px;
+}
+
+#mv_header .navbar-mv .navbar-nav li.active a,
+#mv_header .navbar-mv .navbar-nav li a:hover {
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid skyblue;
+}
+
+#mv_header .navbar-mv .navbar-toggle {
+    margin-top: 18px;
+}
+
+/* #mv_header .top-bar .top-bar-1{
+    background-color: red;
+}
+
+#mv_header .top-bar .top-bar-2 {
+    background-color: green;
+}
+
+#mv_header .top-bar .top-bar-3 {
+    background-color: blue;
+}
+
+#mv_header .top-bar .top-bar-4 {
+    background-color: orange;
+} */
+
+/* head格式 */
+
+/* 輪播圖的格式 */
+
+#mv_carousel .item {
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+@media screen and (min-width:800px) {
+    #mv_carousel .item {
+        height: 410px;
+    }
+}
+
+/* 輪播圖的格式 */
+
+/* 電影時刻 */
+
+/* #movieTime{
+    background-color: rgb(243, 236, 236);
+    padding: 20px 0;
+} */
+
+#movieTime .nav {
+    font-size: 18px;
+}
+
+#movieTime .nav a {
+    color: #999;
+}
+
+#movieTime .nav li.active a,
+#movieTime .nav li a:hover {
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid skyblue;
+    color: #000;
+}
+
+#movieTime .media-left {
+    padding: 20px 0px;
+}
+
+/* 電影時刻 */
+
+/* 影評推薦 */
+
+#mv_hot .person {
+    padding: 15px 10px;
+}
+
+#mv_hot .person .media-left {
+    width: 20%;
+}
+
+#mv_hot .person .media-body {
+    width: 60%;
+    vertical-align: middle;
+}
+
+#mv_hot .person .media-right {
+    width: 20%;
+    text-align: left;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/* 影評推薦 */
+
+/* 訂票說明 */
+
+.sd_title {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #d2d2d2;
+    height: 30px;
+    width: auto;
+    line-height: 30px;
+    padding-left: 50px;
+}
+
+.classification {
+    border: 1px solid #d2d2d2;
+    color: #ffffff;
+    background-color: #3272b8;
+    padding: 1px;
+    font-size: .9em;
+    margin-right: 5px;
+}
+
+.mvred {
+    background-color: red;
+}
+
+.mvgreen {
+    background-color: green;
+}
+
+/* 訂票說明 */
+
+/* 其他連結 */
+
+#mv_link .logos {
+    list-style: none;
+}
+
+#mv_link .logos li {
+    display: inline-block;
+    padding: 20px 30px;
+}
+
+/* 其他連結 */
+
+/* 底部 */
+
+#mv_footer {
+    widows: 100%;
+    height: 200px;
+    background: url("/Movie/images/127-1.jpg") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#mv_footer ul {
+    list-style: none;
+}
+
+#mv_footer .one,
+#mv_footer .two {
+    padding: 10px;
+    border-right: 2px solid #666;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mv_footer .one li {
+    line-height: 40px;
+}
+
+#mv_footer .one li a {
+    color: #ffffff
+}
+
+/* #mv-footer .three { 
+    top: 40px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#mv-footer .three a {
+    margin-right: 100px;
+    text-decoration: none;
+}  */
+
+/* 底部 */

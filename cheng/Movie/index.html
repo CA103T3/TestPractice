@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/Movie/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Movie/css/base.css">
+    <link rel="shortcut icon" href="/Movie/images/favicon.ico" type="image/x-icon">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- head -->
+    <header id="mv_header">
+        <!-- top -->
+        <div class="top-bar hidden-sm hidden-xs text-center text-muted">
+            <div class="container">
+                <div class="row">
+                    <div class="top-bar-1 col-md-2">
+                        <a href="" class="text-muted">
+                            <b class="icon-phone"></b>
+                            <span>加入我們</span>
+                            <span class="caret"></span>
+                            <img src="/Movie/images/127-1.jpg" alt="QR code" width="300">
+                        </a>
+                    </div>
+                    <div class="top-bar-2 col-md-5">
+                        <b class="icon-tel"></b>
+                        <span>1111-2222 (服務時間09:00~21:00)</span>
+                    </div>
+                    <div class="top-bar-3 col-md-2">
+                        <a href="" class="text-muted">廠商合作</a>
+                        <a href="#" class="text-muted">工程師</a>
+                    </div>
+                    <div class="top-bar-4 col-md-3">
+                        <a href="" class="btn btn-success btn-xs" role="button">免費註冊</a>
+                        <a href="" class="text-muted" role="button" style="margin-left: 10px;" data-toggle="modal" data-target="#mv_login">立即登入</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- nav -->
+        <nav class="navbar navbar-default navbar-inverse navbar-static-top navbar-mv">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#lk_nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="/Movie/images/127-1.jpg" alt="ooo" width="80">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="lk_nav">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="javascript:;">快速訂票</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">電影時刻</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">影評推薦</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">訂票說明</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">其他連結</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                        <li>
+                            <a href="#">個人中心</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- head -->
+
+    <!-- 輪播圖 -->
+    <section id="mv_carousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#mv_carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#mv_carousel" data-slide-to="1"></li>
+            <li data-target="#mv_carousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" data-sm-img="/Movie/images/sm_4099.jpg" data-lg-img="/Movie/images/bigp/DFJ_7573.jpg">
+            </div>
+
+            <div class="item" data-sm-img="/Movie/images/sm_7561.jpg" data-lg-img="/Movie/images/347.jpg">
+            </div>
+
+            <div class="item" data-sm-img="/Movie/images/sm_9093.jpg" data-lg-img="/Movie/images/527.png">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#mv_carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#mv_carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </section>
+    <!-- /輪播圖 -->
+
+
+
+    <!-- 電影時刻 -->
+    <section id="movieTime">
+        <div class="container">
+            <div class="title text-center">
+                <h1>
+                    <strong>電影時刻</strong>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sd_title"></div>
+                    <!-- Nav tabs -->
+                    <div style="overflow: auto;">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#movie1" aria-controls="home" role="tab" data-toggle="tab">即將上映</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#movie2" aria-controls="profile" role="tab" data-toggle="tab">現正熱映</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#movie3" aria-controls="messages" role="tab" data-toggle="tab">Messages</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#movie4" aria-controls="settings" role="tab" data-toggle="tab">Test</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#movie4" aria-controls="settings" role="tab" data-toggle="tab">Test</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#movie4" aria-controls="settings" role="tab" data-toggle="tab">Test</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#movie4" aria-controls="settings" role="tab" data-toggle="tab">Test</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#movie4" aria-controls="settings" role="tab" data-toggle="tab">Test</a>
+                            </li>
+                            <li class="pull-right hidden-sm hidden-xs">
+                                <a href="#" aria-controls="settings" role="tab" data-toggle="tab">更多</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="movie1">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="media-left">
+                                            <img class="media-object" src="/test/img/127-1.jpg" alt="" width="200" height="300">
+                                            <a href="#" class="text-center">電影介紹</a>
+                                            <br>
+                                            <a href="#">預告影片</a>
+                                        </div>
+                                        <!-- <div class="media-body text-muted" style="padding-top: 270px">
+                                        <h4 class="media-heading">好看</h4>
+                                        <h4 class="media-heading">可以吧？</h4>
+                                    </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade" id="movie2">
+                            <img src="/test/img/347.jpg" alt="">
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade" id="movie3">
+                            <img src="/test/img/527.png" alt="">
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade" id="movie4">
+                            <p>Test</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- /電影時刻 -->
+
+    <!-- 影評推薦 -->
+    <section id="mv_hot">
+        <div class="title text-center">
+            <h1>
+                <strong>影評推薦</strong>
+            </h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sd_title"></div>
+                </div>
+
+                <div class="col-md-6 person">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="/Movie/images/girls/girl6.jpg" alt="girl6" class="media-object img-responsive img-circle img-thumbnail" width="100">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <span class="text-danger">1號櫃檯</span>
+                            </h4>
+                            <p class="text-muted" style="margin-top: 10px;">
+                                清純可愛又好用
+                            </p>
+                        </div>
+                        <div class="media-right text-danger">
+                            222包廂
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 person">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="/Movie/images/girls/girl1.jpg" alt="girl1" class="media-object img-responsive img-circle img-thumbnail" width="100">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <span class="text-danger">1號櫃檯</span>
+                            </h4>
+                            <p class="text-muted" style="margin-top: 10px;">
+                                清純可愛又好用
+                            </p>
+                        </div>
+                        <div class="media-right text-danger">
+                            206包廂
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 person">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="/Movie/images/girls/girl2.jpg" alt="girl2" class="media-object img-responsive img-circle img-thumbnail" width="100">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <span class="text-danger">2號櫃檯</span>
+                            </h4>
+                            <p class="text-muted" style="margin-top: 10px;">
+                                大方可愛又好用
+                            </p>
+                        </div>
+                        <div class="media-right text-danger">
+                            306包廂
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 person">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="/Movie/images/girls/girl3.jpg" alt="girl3" class="media-object img-responsive img-circle img-thumbnail" width="100">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <span class="text-danger">3號櫃檯</span>
+                            </h4>
+                            <p class="text-muted" style="margin-top: 10px;">
+                                清純可愛又好用
+                            </p>
+                        </div>
+                        <div class="media-right text-danger">
+                            226包廂
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 person">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="/Movie/images/girls/girl4.jpg" alt="girl4" class="media-object img-responsive img-circle img-thumbnail" width="100">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <span class="text-danger">4號櫃檯</span>
+                            </h4>
+                            <p class="text-muted" style="margin-top: 10px;">
+                                清純可愛又好用
+                            </p>
+                        </div>
+                        <div class="media-right text-danger">
+                            406包廂
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 person">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="/Movie/images/girls/girl5.jpg" alt="girl5" class="media-object img-responsive img-circle img-thumbnail" width="100">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <span class="text-danger">5號櫃檯</span>
+                            </h4>
+                            <p class="text-muted" style="margin-top: 10px;">
+                                清純可愛又好用
+                            </p>
+                        </div>
+                        <div class="media-right text-danger">
+                            242包廂
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- 影評推薦 -->
+
+
+    <!-- 訂票說明 -->
+    <section id="mv_about">
+        <div class="title text-center">
+            <h1>
+                <strong>訂票說明</strong>
+            </h1>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sd_title"></div>
+                    <ol>
+                        <li>僅提供網路購票，不接受電話或傳真訂票。</li>
+                        <li>每筆訂單限購6張。</li>
+                        <li>僅提供售票頁面顯示的票價 / 票種，其他票價 / 票種及影城其他優惠方案請至各影城窗口現場購票。</li>
+                        <li>請務必了解並同意
+                            <a href="#">退票說明</a>相關規定後再進行訂票。</li>
+                        <li>訂票前請先確認電影分級
+                            <br> (
+                            <span class="classification mvgreen">普遍級</span>一般觀眾皆可觀賞；
+                            <span class="classification">保護級</span>未滿六歲兒童不得觀賞，六歲以上十二歲未滿須家長或成年親友陪伴；
+                            <span class="classification">輔12級</span>未滿十二歲之兒童不得觀賞；
+                            <span class="classification">輔15級</span>未滿15歲之人不宜觀賞；
+                            <span class="classification mvred">限制級</span>未滿十八歲之人不得觀賞)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /訂票說明 -->
+
+
+
+    <!-- 其他連結 -->
+    <section id="mv_link">
+        <div class="title text-center">
+            <h1>
+                <strong>其他連結</strong>
+            </h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sd_title"></div>
+                </div>
+
+                <ul class="logos">
+                    <li>
+                        <a href="">
+                            <img src="/Movie/images/png/001-youtube.png" alt="" width="100">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/Movie/images/png/048-android.png" alt="" width="80">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/Movie/images/png/003-wordpress.png" alt="" width="80">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/Movie/images/png/004-wikipedia.png" alt="" width="100">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/Movie/images/png/005-whatsapp.png" alt="" width="100">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/Movie/images/png/008-twitter.png" alt="" width="100">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/Movie/images/png/011-stumbleupon.png" alt="" width="100">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- /其他連結 -->
+
+    <!-- footer -->
+    <footer id="mv_footer">
+        <div class="container">
+            <div class="row" style="padding-top: 20px;">
+                <div class="col-md-3 col-md-offset-1 one">
+                    <div class="row">
+                        <ul class="col-md-6">
+                            <li>
+                                <a href="">快速訂票</a>
+                            </li>
+                            <li>
+                                <a href="">電影時刻</a>
+                            </li>
+                            <li>
+                                <a href="">影評推薦</a>
+                            </li>
+                        </ul>
+                        <ul class="col-md-6">
+                            <li>
+                                <a href="">訂票說明</a>
+                            </li>
+                            <li>
+                                <a href="">聯絡我們</a>
+                            </li>
+                            <li>
+                                <a href="">個人中心</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 two">
+                    <h5>公司地址：桃園市中壢區</h5>
+                    <h5>聯絡電話：0800-000-123</h5>
+                    <h5>E-mail：abc@movie.com.tw</h5>
+                </div>
+                <div class="col-md-3" style="top: 40px; right: -40px;">
+                    <h5>聯絡我們：</h5>
+                    <a href="">
+                        <img src="/Movie/images/png/045-box.png" alt="" width="50" data-toggle="tooltip" data-placement="bottom" title="關注我們">
+                        <img src="/Movie/images/png/038-envato.png" alt="" width="50" data-toggle="tooltip" data-placement="bottom" title="YES">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    <!-- Login -->
+    <div class="modal fade" id="mv_login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        登入
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="請輸入手機號碼">
+                    <input type="text" placeholder="請輸入密碼">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        關閉
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        登入
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Login -->
+
+
+    <script src="/Movie/lib/jQuery/jquery3_3_1.js"></script>
+    <script src="/Movie/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Movie/js/base.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+</body>
+
+</html>
