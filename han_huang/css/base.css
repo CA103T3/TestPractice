@@ -64,8 +64,14 @@
     content: counter(li)".   ";
     display:inline-block;
     width: 2em;
-  /*margin-left: -1.75em;*/
+}
 
+@media screen and (max-width: 992px) {
+    .rank_list li {
+        left: 30%;
+        width: 40%;
+        margin: auto;
+    }
 }
 
 .close-item {
