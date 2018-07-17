@@ -14,9 +14,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!-- jQuery Modal -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
         <link rel="stylesheet" href="/css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/base.css">
         <style>
@@ -49,15 +46,25 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">訂票</a></li>
-                    <li><a href="#">電影時刻</a></li>  
-                    <li><a href="#">電影介紹</a></li>
-                    <li><a href="#">影評文章</a></li>
-                    <li><a href="#">社群揪團</a></li>
+                    <li class="active"><a href="#">訂票系統</a></li>
+                    <li><a href="#">電影院資訊</a></li>
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">電影資訊<span class="caret"></span></a>
+                      <ul class="dropdown-menu menu-custom">
+                        <li><a href="#">熱播電影</a></li>
+                        <li><a href="#">即將上映</a></li>
+                        <li><a href="#">電影介紹</a></li>
+                        <li><a href="#">電影影評</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">社群平台</a></li>
+                    <li><a href="#">活動公告</a></li>
+                    <li><a href="#">揪團看電影</a></li>
                     <li class="dropdown">
                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">客服中心<span class="caret"></span></a>
                       <ul class="dropdown-menu menu-custom">
                         <li><a href="#">FAQ</a></li>
+                        <li><a href="#">線上客服</a></li>
                         <li><a href="#">聯絡我們</a></li> 
                       </ul>
                     </li>

@@ -1,5 +1,9 @@
 //http://www.dwuser.com/education/content/creating-a-jquery-image-scroller/
 $(function(){
+    //for scroller
+    $(window).on("resize", function () {
+        $("body").css("padding-top", $("nav").height());
+    });
 
     $("#scroller").prop("width", $(window).width());
     var scroller = $('#scroller div.innerScrollArea');
