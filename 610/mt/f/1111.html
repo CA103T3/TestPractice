@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html >
+  <head>
+ <meta charset="utf-8">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- css
+================================================== -->
+         <style>
+        /* 將子選單加入+號 */li.dropdown-submenu>a:after{
+          display:block;
+          content:"+";
+          float:right;
+          font-size: 15px;
+          margin-top:-1px;
+          margin-left:5px;
+          border: solid 1px #ccc;
+          padding:0 4px;
+          border-radius: 3px;
+        }
+        /* 選單開啟時變- */li.dropdown-submenu.open>a:after{
+          content:"-";
+        }
+        li.open ul.dropdown-menu>li.open>ul.dropdown-menu{
+          position: relative;
+          border: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+        li.open ul.dropdown-menu>li.open>ul.dropdown-menu>li{
+          padding-left: 20px;
+        }
+
+        /* 滑入選單時變換底色 */  .dropdown-menu>li>a:focus, 
+          .dropdown-menu>li>a:hover {
+            background: rgba(0,0,0,0.1) !important;
+        }
+         </style>
+         <script type="text/javascript">
+        $(function(){
+              $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+                //點擊時避免跟隨href位置
+                event.preventDefault();
+                 //避免在點擊時關閉菜單
+                event.stopPropagation();
+                if($(this).parent().hasClass('open') == false){ //當class=open為否時
+                  $(this).parent().addClass('open');
+                }else{
+                  $(this).parent().removeClass('open');
+                }
+            });
+        });</script>
+          </head>
+        <!-- js
+================================================== -->
+  <body>
+<div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+         
+        <a class="navbar-brand" href="https://www.minwt.com">Minwt</a>
+      </div>
+    
+      <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">選單1</a></li>
+
+            <li class="dropdown-submenu"><a href="#" data-toggle="dropdown" >選單2 </a>
+
+              <ul class="dropdown-menu">
+                <li><a href="#">次選單1</a></li>
+                <li class="dropdown-submenu"><a href="#" data-toggle="dropdown">次選單2</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">次次選單1</a></li>
+                      <li><a href="#">次次選單2</a></li>
+                      <li class="dropdown-submenu"><a href="#" data-toggle="dropdown">次次選單3</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">次次次選單1</a></li>
+                          <li><a href="#">次次次選單2</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                </li>
+                <li><a href="#">次選單3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">選單3</a></li>
+            <li><a href="#">選單4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+
+<nav class="navbar navbar-inverse navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a  class="navbar-brand" href="C:\Users\Yilin\Desktop\mt\f\i.html">大廳</a>
+                </div>
+
+                <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">電影資訊</a>
+
+                <ul class="dropdown-menu">
+                    <li class="dropdown-submenu"><a href="#" data-toggle="dropdown" >現正上映</a>
+                        <ul class="dropdown-menu">
+                            <li><a  href="#">海綿腦包</a></li>
+                            <li><a href="#">叔比狗</a></li>
+                            <li><a href="#">爆走兄弟</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu"><a href="#" data-toggle="dropdown" >熱播上映</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">海綿腦包</a></li>
+                            <li><a href="#">叔比狗</a></li>
+                            <li><a href="#">爆走兄弟</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu"><a href="#" data-toggle="dropdown" >即將上映</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">飛天小女警</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">德克斯特的實驗室</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" a href="#">膽小狗英雄</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="si.html">註冊</a></li>
+                    <li><a href="log.html">登入</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+  </body>
+</html>

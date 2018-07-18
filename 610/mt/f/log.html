@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/css/base.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script>
+            window.onload = loadSomething;
+        </script>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-inverse navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a  class="navbar-brand" href="C:\Users\Yilin\Desktop\mt\f\i.html">大廳</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">近期上映</a>
+
+               <ul class="dropdown-menu">
+                    <li><a id="action-1" href="#">海綿寶寶</a></li>
+                    <li><a href="#">蠟筆小新</a></li>
+                    <li><a href="#">喜洋洋</a></li>
+                </ul>
+                </li>
+                
+                    <li><a href="/">即將上映</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="si.html">註冊</a></li>
+                    <li><a href="log.html">登入</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="col-sm-6 col-sm-offset-3">
+                <form action="/login" method="POST" onsubmit="saveSomething();return false;">
+                    <div class="form-group">
+                        <label for="m">電子郵件:</label>
+                        <input name="mail" class="form-control" id="m" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p">密碼:</label>
+                        <input name="pass" class="form-control" id="p" type="password" required>
+                    </div>
+                    <button class="btn btn-success btn-block" type="submit">登入</button>
+                </form>
+            </div>
+        </div>
+        
+
+        
+    </body>
+</html>
