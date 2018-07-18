@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta charset="utf-8">   
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="/kd_movie/cssTest/base1.css">
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+            
+            <script src="/kd_movie/JS_html5/login.js"></script>    
+            <script>
+                window.onload = loadSomething;
+            </script>
+                      
+        </head>
+        <boby>
+       
+         
+         
+         <div class="container">
+             <div class="col-sm-6 col-sm-offset-3">
+              
+               <form  name="register" action="/login" method="POST" onsubmit= "saveSomething(); return false; ">
+                
+                   <div class="form-group">
+                          <label for="m">輸入帳號:</label>
+                          <input class="form-control" id="m" type="email" name="mailmail" required>
+                   </div>
+                   <div class="form-group">
+                          <label for="p">輸入密碼:</label>
+                          <input class="form-control" id="p" type="password" name="psw" required>       
+                   </div>     
+<!--                   <input type="button" id="regist" value="提交">-->
+                    <button class="btn btn-success btn-block" type="submit" onclick="javascript:location.href='/kd_movie/movie.html'">登入</button>   
+               </form>  
+             </div>
+         </div>        
+             <body background="https://meet.eslite.com/Content/Images/Post/%E8%AA%A0%E5%93%81%E9%9B%BB%E5%BD%B1%E9%99%A2_%E7%B4%85%E6%A4%85(A%E5%BB%B3).jpg">              
+        </boby>
+</html>
