@@ -10,17 +10,6 @@
     color: darkturquoise;
 }
 
-/*https://stackoverflow.com/questions/18474564/bootstrap-3-navbar-with-logo*/
-.navbar-brand {
-  padding: 0px;
-}
-.navbar-brand > img {
-  height: 100%;
-  padding: 0px;
-  width: auto;
-}
-
-
 .menu-custom {
     font-size: 18px;
 }
