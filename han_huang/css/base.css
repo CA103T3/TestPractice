@@ -31,6 +31,7 @@
 
 .body-custom {
     background-color: rgba(46, 51, 56, 0.9);
+    /*background-image: url("/img/bg.jpg");*/
     /*for navbar-fixed-top test*/
     min-height: 2000px;
     padding-top: 54px;
@@ -139,4 +140,25 @@
 .p-custom {
     font-size:16px;
     color:aliceblue;
+}
+
+.bgimg {
+    background-image: url("/img/bg.jpg");
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+}
+
+.search-bar-margin {
+    /*margin: 30px 0 30px 0;*/
+    /*
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.serarch-bar-bg {
+    background-color: rgba(50, 50, 50, 0.8);
 }
