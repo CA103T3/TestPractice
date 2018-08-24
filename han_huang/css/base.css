@@ -40,6 +40,10 @@
     font-size: 24px;
 }
 
+.font-custom {
+    font-size: 18px;
+}
+
 .body-custom {
     background-color: rgba(46, 51, 56, 0.9);
     /*background-image: url("/img/bg.jpg");*/
