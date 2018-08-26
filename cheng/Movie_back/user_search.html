@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/Movie_back/js/chart/LineChart.js"></script>
+    <link rel="stylesheet" href="/Movie_back/css/base.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- 螢幕變小的按鈕 -->
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">CA103 Admin</a>
+            </div>
+            <!-- 螢幕變小的按鈕 -->
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html">
+                            <span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;後台首頁</a>
+                    </li>
+                    <li>
+                        <a href="user_list.html">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用戶管理</a>
+                    </li>
+                    <li>
+                        <a href="content.html">
+                            <span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;內容管理</a>
+                    </li>
+                    <li>
+                        <a href="tag.html">
+                            <span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;標籤管理</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" role="button" data-toggle="dropdown">
+                            Admin
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="index.html">
+                                    <span class="glyphicon glyphicon-screenshot"></span>&nbsp;&nbsp;前台首頁</a>
+                            </li>
+                            <li>
+                                <a href="index.html">
+                                    <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;個人主頁</a>
+                            </li>
+                            <li>
+                                <a href="index.html">
+                                    <span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;個人設定</a>
+                            </li>
+                            <li>
+                                <a href="index.html">
+                                    <span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;帳號中心</a>
+                            </li>
+                            <li>
+                                <a href="index.html">
+                                    <span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;我的收藏</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- header -->
+
+
+    <!-- sidebar -->
+
+    <div class="navbar-default" id="slider_sub">
+        <ul class="nav">
+            <li>
+                <!-- search -->
+                <div class="input-group mysearch">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+                <!-- search -->
+            </li>
+
+            <!-- 系統管理 側邊折疊 -->
+            <li>
+                <a href="#sub1" data-toggle="collapse">系統管理
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                </a>
+                <ul id="sub1" class="nav collapse">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-info-sign"></span>&nbsp;測試一</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp; 測試二</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-list-alt"></span>&nbsp; 測試三</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp; 測試四</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- 系統管理 側邊折疊 -->
+
+
+            <!-- 電影管理 側邊折疊 -->
+            <li>
+                <a href="#sub2" data-toggle="collapse">電影管理
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                </a>
+                <ul id="sub2" class="nav collapse">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-info-sign"></span>&nbsp;測試一</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp; 測試二</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-list-alt"></span>&nbsp; 測試三</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp; 測試四</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- 電影管理 側邊折疊 -->
+
+
+            <!-- 影廳管理 側邊折疊 -->
+            <li>
+                <a href="#sub3" data-toggle="collapse">影廳管理
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                </a>
+                <ul id="sub3" class="nav collapse">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-info-sign"></span>&nbsp;測試一</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp; 測試二</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-list-alt"></span>&nbsp; 測試三</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp; 測試四</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- 影廳管理 側邊折疊 -->
+        </ul>
+    </div>
+
+    <!-- sidebar -->
+
+    <div class="page_main">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">管理</a>
+            </li>
+            <li>
+                <a href="#">新增</a>
+            </li>
+            <li class="active">
+                <a href="#">哦哦</a>
+            </li>
+        </ol>
+
+        <div class="container">
+            <div class="col-md-10">
+                <div class="page-header">
+                    <h1>會員管理</h1>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li>
+                        <a href="user_list.html">會員列表</a>
+                    </li>
+                    <li class="active">
+                        <a href="user_search.html">會員搜索
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user_list.html">分析會員</a>
+                    </li>
+                </ul>
+
+                <form action="#" class="user_search">
+                    <div class="alert alert-info" role="alert">
+                        <strong>提示：</strong>
+                        可用*萬用字元搜尋
+                    </div>
+                    <div class="form-group">
+                        <label for="name">會員名稱</label>
+                        <input type="text" id="name" class="form-control" placeholder="請輸入會員名稱">
+                    </div>
+                    <div class="form-group">
+                        <label for="uid">UID</label>
+                        <input type="text" id="uid" class="form-control" placeholder="請輸入會員ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="memrole">選擇角色</label>
+                        <select class="form-control" id="memrole">
+                            <option value="">管理者</option>
+                            <option value="">XXX</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+
+            </div>
+
+            <!-- 分頁 -->
+            <nav class="pull-right">
+                <ul class="pagination">
+                    <li class="disabled">
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">6</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 分頁 -->
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+
+</html>

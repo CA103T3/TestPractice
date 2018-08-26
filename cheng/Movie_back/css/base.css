@@ -1,0 +1,25 @@
+.ulnav{
+    margin-right: 30px;
+}
+
+/* .sidenav{
+    margin-top: 51px;
+} */
+
+.pull00{
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+@media (min-width: 768px){
+    #slider_sub{
+        width: 250px;
+        position: absolute;
+    }
+    .mysearch{
+        margin: 10px 0;
+    }
+    .page_main{
+        margin-left: 260px; 
+    }
+}
